@@ -60,7 +60,7 @@ class CreateToolTip(object):
 #Function to select a file from the file system
 def selectfile():
     try:
-        filename = fd.askopenfilename(initialdir="/", title="Select a File", filetypes=(("PNG", "*.png*"), ("JPG", "*.jpg*"), ("JPG", "*.jpg*"), ("JPEG", "*.jpeg*"), ("Bitmap", "*.bmp*")))
+        filename = fd.askopenfilename(initialdir="/", title="Select a File", filetypes=(("All", "*.*"), ("PNG", "*.png*"), ("JPG", "*.jpg*"), ("JPEG", "*.jpeg*"), ("Bitmap", "*.bmp*")))
         select_image_entry.delete(0, "end")
         select_image_entry.insert(0, filename)
         file_location = select_image_entry.get()
