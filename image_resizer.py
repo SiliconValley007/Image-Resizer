@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import filedialog as fd
 from PIL import Image
 from os import path
+from tkinter import messagebox
 
 #Class to show Tooltip on hover over a widget
 class CreateToolTip(object):
@@ -92,6 +93,7 @@ def resizeImage():
         new_filename = file_location[:-4]+"_resized"+"_"+str(num)+file_location[-4:]
         num += 1
     new_image.save(new_filename)
+    messagebox.showinfo('Success', 'Image Resizing Successfull')
 
 root = tk.Tk()
 root.title('Image Resizer')
